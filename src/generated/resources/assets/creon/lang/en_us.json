@@ -1,4 +1,6 @@
 {
   "effect.creon.creon": "Creon",
-  "item.creon.creon": "Creon Capsule"
+  "effect.creon.creon_ultimate": "Ultimate Creon",
+  "item.creon.creon": "Creon Capsule",
+  "item.creon.creon_ultimate": "Ultimate Creon Capsule"
 }

@@ -21,7 +21,9 @@ public class CreonMod {
 	public static final DeferredRegister<MobEffect> EFFECT = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, MODID);
 
 	public static final RegistryObject<Item> CREON_ITEM = ITEMS.register("creon", CreonItem::new);
+	public static final RegistryObject<Item> CREON_ULTIMATE_ITEM = ITEMS.register("creon_ultimate", CreonUltimateItem::new);
 	public static final RegistryObject<MobEffect> CREON_EFFECT = EFFECT.register("creon", CreonEffect::new);
+	public static final RegistryObject<MobEffect> CREON_ULTIMATE_EFFECT = EFFECT.register("creon_ultimate", CreonUltimateEffect::new);
 
 	public CreonMod() {
 		LOGGER.info("Creon is now available in drugstores.");

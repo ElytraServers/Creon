@@ -11,27 +11,27 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public class CreonItem extends Item {
+public class CreonUltimateItem extends Item {
 
 	private static final FoodProperties foodProp = new FoodProperties.Builder()
 			.nutrition(1)
 			.saturationMod(0.1F)
 			.alwaysEat()
 			.fast()
-			.effect(() -> new MobEffectInstance(CreonMod.CREON_EFFECT.get(), 400), 1.0F)
+			.effect(() -> new MobEffectInstance(CreonMod.CREON_ULTIMATE_EFFECT.get(), 1200), 1.0F)
 			.build();
 
-	private static final Item.Properties prop = new Item.Properties()
+	private static final Properties prop = new Properties()
 			.food(foodProp)
 			.tab(CreativeModeTab.TAB_BREWING);
 
-	public CreonItem() {
+	public CreonUltimateItem() {
 		super(prop);
 	}
 
 	@Override
 	public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, Player player, @NotNull InteractionHand hand) {
-		if(player.hasEffect(CreonMod.CREON_EFFECT.get())) {
+		if(player.hasEffect(CreonMod.CREON_ULTIMATE_EFFECT.get())) {
 			return InteractionResultHolder.pass(player.getItemInHand(hand));
 		}
 		return super.use(level, player, hand);

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "creon:creon"
+    },
+    {
+      "item": "creon:creon"
+    },
+    {
+      "item": "creon:creon"
+    },
+    {
+      "item": "creon:creon"
+    }
+  ],
+  "result": {
+    "item": "creon:creon_ultimate"
+  }
+}

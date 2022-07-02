@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "creon:creon_ultimate"
+    ]
+  },
+  "criteria": {
+    "has_creon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "creon:creon"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "creon:creon_ultimate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_creon",
+      "has_the_recipe"
+    ]
+  ]
+}

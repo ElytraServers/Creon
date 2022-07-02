@@ -46,6 +46,7 @@ class CreonItemModelProvider extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		this.basicItem(CreonMod.CREON_ITEM.get());
+		this.basicItem(CreonMod.CREON_ULTIMATE_ITEM.get());
 	}
 }
 
@@ -57,9 +58,13 @@ class CreonRecipeProvider extends RecipeProvider {
 
 	@Override
 	protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> recipe) {
-		ShapelessRecipeBuilder.shapeless(CreonMod.CREON_ITEM.get(), 8)
+		ShapelessRecipeBuilder.shapeless(CreonMod.CREON_ITEM.get(), 4)
 				.requires(Items.ROTTEN_FLESH)
 				.unlockedBy("has_rotten_flesh", has(Items.ROTTEN_FLESH))
+				.save(recipe);
+		ShapelessRecipeBuilder.shapeless(CreonMod.CREON_ULTIMATE_ITEM.get(), 1)
+				.requires(CreonMod.CREON_ITEM.get(), 4)
+				.unlockedBy("has_creon", has(CreonMod.CREON_ITEM.get()))
 				.save(recipe);
 	}
 }
@@ -73,7 +78,9 @@ class CreonEnglishLanguageProvider extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		addItem(CreonMod.CREON_ITEM, "Creon Capsule");
+		addItem(CreonMod.CREON_ULTIMATE_ITEM, "Ultimate Creon Capsule");
 		addEffect(CreonMod.CREON_EFFECT, "Creon");
+		addEffect(CreonMod.CREON_ULTIMATE_EFFECT, "Ultimate Creon");
 	}
 }
 
@@ -86,6 +93,8 @@ class CreonChineseLanguageProvider extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		addItem(CreonMod.CREON_ITEM, "健胃消食片");
+		addItem(CreonMod.CREON_ULTIMATE_ITEM, "终极健胃消食片");
 		addEffect(CreonMod.CREON_EFFECT, "健胃消食片");
+		addEffect(CreonMod.CREON_ULTIMATE_EFFECT, "终极健胃消食片");
 	}
 }

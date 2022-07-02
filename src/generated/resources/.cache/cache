@@ -1,5 +1,8 @@
-f41689c53a7ce91bb9ccebe895d629cea1e2e0c7 assets/creon/lang/en_us.json
-ddca61d983e50f8c3796bf8edee9a624de5da128 assets/creon/lang/zh_cn.json
+e5691a55ad63f089eca84f67bf99d6af5cc73b37 assets/creon/lang/en_us.json
+8e3a009ddd2334e9e875ec2532eee664a83e821c assets/creon/lang/zh_cn.json
 feefb95810b150732674072112e1b19c0d833332 assets/creon/models/item/creon.json
+d6f8ddafd37150615707716d690e7f4cb6369d24 assets/creon/models/item/creon_ultimate.json
 6446758bd42101ffc101c42539ff944058bdeb7b data/creon/advancements/recipes/brewing/creon.json
-b13c30136797b635b2ac13264114039259bc4d08 data/creon/recipes/creon.json
+5f00b411931d315aef71b564328f14de626148d5 data/creon/advancements/recipes/brewing/creon_ultimate.json
+424def09811d0514f371eebc1790b03f9f3069b7 data/creon/recipes/creon.json
+405955e6da62e3524c8e0bb9f517a26aae61be79 data/creon/recipes/creon_ultimate.json
