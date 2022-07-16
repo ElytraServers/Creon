@@ -4,6 +4,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodData;
 import org.jetbrains.annotations.NotNull;
 
 public class CreonUltimateEffect extends MobEffect {
@@ -18,7 +19,10 @@ public class CreonUltimateEffect extends MobEffect {
 
 		if(entity instanceof Player player) {
 			if(player.getFoodData().getFoodLevel() > 2) {
-				player.getAbilities().invulnerable = duration > 1;
+				FoodData fd = player.getFoodData();
+				if(fd.getFoodLevel() > 19) {
+					fd.setFoodLevel(19);
+				}
 			} else {
 				player.removeEffect(CreonMod.CREON_ULTIMATE_EFFECT.get());
 			}
